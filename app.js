@@ -1,29 +1,34 @@
 var count = 0
 
-function KeyUpFunction(e) {
+function KeyFunction(e) {
    	var enteredKey = e.key
-
-      console.log("*********")
-      console.log(enteredKey)
-      console.log(enteredKey.charCodeAt(0))
       var asc = enteredKey.charCodeAt(0)
 
-      if (asc < 122 && asc >= 32)
+      var spans = document.getElementById('typingArea').getElementsByTagName('span')
+      console.log("lols", spans.length)
+
+      if (asc <= 122 && asc >= 32)
       {
 
-      	var expectedKey = document.getElementById('typingArea').textContent[count]
+            var typingArea = document.getElementById('typingArea')
+      	var expectedKey = typingArea.textContent[count]
       	var output = document.getElementById("output")
-      	var span = document.createElement('span')
+      	var outspan = document.createElement('span')
 
-      	span.style.color = "black"
-         span.style.background = "red"
+      	outspan.style.color = "black"
+            outspan.style.background = "red"
       	if (enteredKey == expectedKey) {
-      		span.style.color = "#33ff39"
-            span.style.background = "none"
+      		outspan.style.color = "#33ff39"
+            outspan.style.background = "none"
       	}
 
-      	span.innerHTML = enteredKey
-      	output.appendChild(span)
+      	outspan.innerHTML = enteredKey
+      	output.appendChild(outspan)
+
+            var spans = document.getElementById('typingArea').getElementsByTagName('span')
+            currentSpan = spans[count]
+            currentSpan.style.textDecoration = "underline"
+            currentSpan.style.background = 'grey'
 
       	count = count + 1
       }
