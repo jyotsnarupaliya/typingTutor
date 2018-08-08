@@ -1,0 +1,25 @@
+/* || base styles */
+footer {
+	position: fixed;
+	bottom:0px;
+	width: 100%;
+	background-color: #002966;
+}
+header {
+	position: fixed;
+	top:0px;
+	width: 100%;
+	background-color: #002966;
+	color: white;
+	font-size: 20px;
+}
+button {
+	background-color: #e60000;
+	border-radius: 5px;
+	box-shadow: 2px 2px 8px;
+	height: 30px;
+}
+body {
+	background: #f2f2f2;
+	margin-top: 10%; 
+}

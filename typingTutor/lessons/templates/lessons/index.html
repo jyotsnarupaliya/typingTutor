@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  {% load static %}
+  <head>
+    <meta charset="utf-8">
+    <title>Typing Tutor</title>
+    <link rel="stylesheet" href="{% static "lessons/baseStyle.css" %}">
+    <header><center><p>My Typing Tutor</p></center></header>
+  </head>
+	<body>
+		<div>
+			<center><p style="background:none; border:none; text-shadow: 2px 2px 8px; font-size: 20px;">Select from following list of lessons to practice</p></center<br>
+			<ol>
+			{% for key in lessons %}
+				<li><a class="button" href="lesson/getText/{{key.name}}">{{key.name}}</a></li>
+			{% endfor %}
+			</ol>
+	</body>
+
+	<script src="{% static "lessons/typing_text.js" %}" type="text/javascript"></script>
+	<script src="{% static "lessons/app.js" %}" type="text/javascript"></script>
+	<footer><p>&copy Jyotsna</p></footer>
+</html>
