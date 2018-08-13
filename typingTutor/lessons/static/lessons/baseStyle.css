@@ -21,5 +21,30 @@ button {
 }
 body {
 	background: #f2f2f2;
-	margin-top: 10%; 
+	margin: 10% 0% 10% 2%;
 }
+
+#typingArea {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	transition: 0.3s;
+	width: 80%;
+	padding:5%;
+}
+#typingArea:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+#output {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        width: 80%;
+        padding:5%;
+	margin: 10% 0% 10% 0%;
+}
+#output:focus {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    background-color:rgba(0,0,0,0.02);
+    border-width: 2px;
+    border-color: rgb(99, 96, 250, 1);
+    border-style: solid;
+}
+

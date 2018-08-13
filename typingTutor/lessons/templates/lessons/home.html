@@ -2,23 +2,12 @@
 <head>
 	{% load static %}
 	<link rel="stylesheet" href="{% static "lessons/baseStyle.css" %}">
-	<style>
-		#typingArea, #output {
-			border-style: solid;
-			border-color: black;
-			border-radius: 5%;
-			padding: 1% 1% 1% 1%;
-			margin-right: 20%;
-			margin-top: 5%
-		}
-	</style>
 </head>
 
 <body onload="setText('{{text}}')">
-	<div  tabindex=0 onkeypress="KeyFunction(event)">
+	<p style="align:centre"> Prctice text</p>
 		<div id="typingArea"></div>
-		<div id="output"></div>
-	</div>
+		<div tabindex=0 onkeypress="KeyFunction(event)" id="output"><p id="result"></p></div>
 
 	<script src="{% static "lessons/typing_text.js" %}" type="text/javascript"></script>
 	<script src="{% static "lessons/app.js" %}" type="text/javascript"></script>

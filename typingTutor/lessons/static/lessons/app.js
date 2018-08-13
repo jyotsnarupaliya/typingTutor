@@ -1,5 +1,5 @@
 var count = 0
-var wrongCount = 0
+iivar wrongCount = 0
 
 function KeyFunction(e) {
    	var enteredKey = e.key
@@ -13,7 +13,7 @@ function KeyFunction(e) {
       {
             var typingArea = document.getElementById('typingArea')
       	var expectedKey = typingArea.textContent[count]
-      	var output = document.getElementById("output")
+      	var output = document.getElementById("result")
       	var outspan = document.createElement('span')
 
       	outspan.style.color = "black"
