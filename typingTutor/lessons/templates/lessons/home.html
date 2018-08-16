@@ -6,8 +6,20 @@
 
 <body onload="setText('{{text}}')">
 	<p style="align:centre"> Prctice text</p>
+		<div id="result">
+			<input type="text" style="background:none; border:none; float:left" readonly="true">SUMMARY</input><br>
+			<input type="text" style="background:none; border:none; float:left" readonly="true">Total: </input>
+			<input type="text" style="background:none; border:none" id="total"></input><br>
+			 <input type="text" style="background:none; border:none; float:left" readonly="true">Right: </input>
+
+			 <input type="text" style="background:none; border:none" id="right"></input><br>
+			 <input type="text" style="background:none; border:none; float:left" readonly="true">Wrong : </input>
+
+			<input type="text" style="background:none; border:none" id="wrong"></input>
+
+		</div>
 		<div id="typingArea"></div>
-		<div tabindex=0 onkeypress="KeyFunction(event)" id="output"><p id="result"></p></div>
+		<div tabindex=0 onkeypress="KeyFunction(event)" id="output"></div>
 
 	<script src="{% static "lessons/typing_text.js" %}" type="text/javascript"></script>
 	<script src="{% static "lessons/app.js" %}" type="text/javascript"></script>
