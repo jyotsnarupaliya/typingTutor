@@ -27,7 +27,7 @@ body {
 #typingArea {
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 	transition: 0.3s;
-	width: 80%;
+	width:60%;
 	padding:5%;
 }
 #typingArea:hover {
@@ -36,9 +36,10 @@ body {
 #output {
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         transition: 0.3s;
-        width: 80%;
+        width: 60%;
         padding:5%;
-	margin: 10% 0% 10% 0%;
+		margin: 2% 0% 10% 0%;
+		display: inline-block;
 }
 #output:focus {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -46,5 +47,14 @@ body {
     border-width: 2px;
     border-color: rgb(99, 96, 250, 1);
     border-style: solid;
+}
+
+#result {
+	float: right;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	transition: 0.3s;
+	width:10%;
+	padding:5%;
+	margin: 0% 2% 0% 0%;
 }
 

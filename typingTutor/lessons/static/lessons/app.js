@@ -1,5 +1,5 @@
 var count = 0
-iivar wrongCount = 0
+var wrongCount = 0
 
 function KeyFunction(e) {
    	var enteredKey = e.key
@@ -13,7 +13,7 @@ function KeyFunction(e) {
       {
             var typingArea = document.getElementById('typingArea')
       	var expectedKey = typingArea.textContent[count]
-      	var output = document.getElementById("result")
+      	var output = document.getElementById("output")
       	var outspan = document.createElement('span')
 
       	outspan.style.color = "black"
@@ -35,51 +35,14 @@ function KeyFunction(e) {
 
       	count = count + 1
       }
-      if (count === spans.length) 
-      {
-            console.log("wrongCount = ", wrongCount)
-            div = document.createElement("DIV")
-            
-            heading = document.createElement("input")
-            heading.type = "text"
-            heading.style.background = "none"
-            heading.style.border = "none"
-            heading.readonly = "true"
-            heading.value = "SUMMARY"
+      
 
-            total = document.createElement("input")
-            total.type = "text"
-            total.style.background = "none"
-            total.style.border = "none"
-            total.readonly = "true"
-            total.value = "Total = " + spans.length
+      total = document.getElementById("total")
+      total.value = spans.length
 
-            right = document.createElement("input")
-            right.type = "text"
-            right.style.background = "none"
-            right.style.border = "none"
-            right.readonly = "true"
-            right.value = "right = " + (spans.length - wrongCount)
+      right = document.getElementById("right")
+      right.value = count - wrongCount
 
-            wrong = document.createElement("input")
-            wrong.type = "text"
-            wrong.style.background = "none"
-            wrong.style.border = "none"
-            wrong.readonly = "true"
-            wrong.value = "Wrong = " + wrongCount
-
-            div.appendChild(heading)
-            div.appendChild(document.createElement("br"))
-            div.appendChild(total)
-            div.appendChild(document.createElement("br"))
-            div.appendChild(right)
-            div.appendChild(document.createElement("br"))
-            div.appendChild(wrong)
-            div.appendChild(document.createElement("br"))
-
-            body = document.getElementsByTagName("body")[0]
-            console.log(body)
-
-            body.appendChild(div)
-      };
+      wrong = document.getElementById("wrong")
+      wrong.value = wrongCount
 }
